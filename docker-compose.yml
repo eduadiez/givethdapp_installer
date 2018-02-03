@@ -1,0 +1,29 @@
+version: "3.3"
+
+services:  
+  feathers:
+    build: docker_feathers
+    container_name: giveth_feathers
+    ports:
+      - 3030:3030
+      - 8888:8546
+    volumes:
+      - ${WORKSPACE}/feathers-giveth:/usr/src/app
+
+  dapp:
+    build: docker_dapp
+    container_name: giveth_dapp
+    environment:
+      - PORT=3010
+      - REACT_APP_FEATHERJS_CONNECTION_URL=http://localhost:3030
+      - REACT_APP_ETH_NODE_CONNECTION_URL=ws://localhost:8888
+    ports:
+      - 3010:3010
+    links:
+      - feathers
+    depends_on:
+      - feathers
+    volumes:
+      - ${WORKSPACE}/giveth-dapp:/usr/src/app
+
+     
