@@ -8,11 +8,8 @@ var shell = require('shelljs');
 var validator = require('validator');
 var path = require('path');
 var os = require('os');
-var sleep = require('system-sleep');
-var ProgressBar = require('progress');
 var logger = require('winston');
 var properties = require("properties");
-var datetime = require('node-datetime');
 
 shell.config.silent = true;
 var homeDir = os.homedir() + "/.givethdapp_installer";

@@ -1,5 +1,7 @@
 # Giveth Installer
 
+![header](https://raw.githubusercontent.com/eduadiez/givethdapp_installer/branch/example.png)
+
 ## Pre-requisites
 
 - nodejs
