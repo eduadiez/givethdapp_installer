@@ -1,6 +1,6 @@
 # Giveth Installer
 
-![header](https://raw.githubusercontent.com/eduadiez/givethdapp_installer/branch/example.png)
+![header](https://raw.githubusercontent.com/eduadiez/givethdapp_installer/master/example.png)
 
 ## Pre-requisites
 
